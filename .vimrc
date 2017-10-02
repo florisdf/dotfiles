@@ -49,32 +49,34 @@ Bundle 'Valloric/YouCompleteMe'
 " Map gt to YCM GoTo
 nnoremap gt :YcmCompleter GoTo<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
-let g:ycm_server_python_interpreter = '/usr/bin/python'
+let g:ycm_python_binary_path = 'python'
 
 " Syntax checking/highlighting
 Plugin 'scrooloose/syntastic'
-
-" Add PEP8 checking
-Plugin 'nvie/vim-flake8'
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = {
+			\ "mode": "active",
+			\ "passive_filetypes": ["python"] }
 
 " Make code look pretty
 let python_highlight_all=1
 syntax on
 
-" File browsing
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-let NERDTreeIgnore=['\.pyc$', '\~$'] " ignore files in NERDTree
-
-Plugin 'kien/ctrlp.vim' " Search basically anythin with Ctrl-P
-
 set nu " Line numbering
-nnoremap ss *:%s//
 
-Plugin 'tpope/vim-fugitive' " Git integration
+" Quick substitute word under cursor
+nnoremap ss *:%s//
 
 " Powerline
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+set laststatus=2 " To make Powerline visible if a window is not split
+let g:Powerline_symbols = 'fancy'
 
 " System clipboard
 set clipboard=unnamed

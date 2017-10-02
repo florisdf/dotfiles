@@ -86,4 +86,4 @@ source $ZSH/oh-my-zsh.sh
 
 alias config='/usr/bin/git --git-dir=/home/fdf/.cfg/ --work-tree=/home/fdf'
 # added by Anaconda2 4.4.0 installer
-export PATH="/home/fdf/anaconda2/bin:$PATH"
+export PATH="/home/fdf/anaconda3/bin:$PATH"
