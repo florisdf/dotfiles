@@ -74,10 +74,23 @@ set nu " Line numbering
 " Quick substitute word under cursor
 nnoremap ss *:%s//
 
+" Remap window split commands
+nnoremap <C-w>\ <C-w>v
+nnoremap <C-w>- <C-w>s
+
 " Powerline
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 set laststatus=2 " To make Powerline visible if a window is not split
 let g:Powerline_symbols = 'fancy'
+
+" Auto pep8
+Plugin 'tell-k/vim-autopep8'
+
+" YCM Generator
+Plugin 'rdnetto/YCM-Generator'
+
+" Vim-Tmux Navigator
+Plugin 'christoomey/vim-tmux-navigator'
 
 " System clipboard
 set clipboard=unnamed
