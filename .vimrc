@@ -40,6 +40,9 @@ Plugin 'vim-scripts/indentpython.vim'
 " Flag unneccessary whitespace
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
+" NERDTree
+Plugin 'scrooloose/nerdtree'
+
 " UTF8 support
 set encoding=utf-8
 
