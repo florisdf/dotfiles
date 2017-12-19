@@ -84,6 +84,31 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias config='/usr/bin/git --git-dir=/home/fdf/.cfg/ --work-tree=/home/fdf'
-# added by Anaconda2 4.4.0 installer
-export PATH="/home/fdf/anaconda3/bin:$PATH"
+alias config="/usr/bin/git --git-dir=/home/fdf/.cfg/ --work-tree=/home/fdf"
+
+# Cuda
+export PATH="/usr/local/cuda-8.0/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH"
+export CUDA_HOME="/usr/local/cuda"
+
+# Set visible cuda devices to the Quadro K4200 with compute capability 3
+export CUDA_VISIBLE_DEVICES=0
+
+# virtualenv and virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
+# Caffe Root
+export CAFFE_ROOT=/home/fdf/git_clones/caffe/
+export PYTHONPATH=/home/fdf/git_clones/caffe/distribute/python:$PYTHONPATH
+export PYTHONPATH=/home/fdf/git_clones/caffe/python:$PYTHONPATH
+
+# PyOpenPose
+export PYTHONPATH=$PYTHONPATH:/home/fdf/git_clones/PyOpenPose/build/PyOpenPoseLib
+
+# Add scripts to python path for easy imports
+export PYTHONPATH=$PYTHONPATH:/home/fdf/scripts:/home/fdf/git_clones
+
+# Add Cargo's bin directory to PATH for Rust
+export PATH="$PATH:$HOME/.cargo/bin"
+
