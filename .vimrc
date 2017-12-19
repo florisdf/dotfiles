@@ -68,10 +68,6 @@ let g:syntastic_mode_map = {
 			\ "mode": "active",
 			\ "passive_filetypes": ["python"] }
 
-" Make code look pretty
-let python_highlight_all=1
-syntax on
-
 set nu " Line numbering
 
 " Quick substitute word under cursor
@@ -94,6 +90,22 @@ Plugin 'rdnetto/YCM-Generator'
 
 " Vim-Tmux Navigator
 Plugin 'christoomey/vim-tmux-navigator'
+
+" Fugitive - git for vim
+Plugin 'tpope/vim-fugitive'
+
+" Vimproc
+Plugin 'Shougo/vimproc.vim'
+
+" Vim-vebugger
+Plugin 'idanarye/vim-vebugger'
+
+" Vim-vebugger keymaps
+let g:vebugger_leader = ";"
+
+" Make code look pretty
+let python_highlight_all=1
+syntax on
 
 " System clipboard
 set clipboard=unnamed
