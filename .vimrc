@@ -77,10 +77,13 @@ nnoremap ss *:%s//
 nnoremap <C-w>\ <C-w>v
 nnoremap <C-w>- <C-w>s
 
-" Powerline
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-set laststatus=2 " To make Powerline visible if a window is not split
-let g:Powerline_symbols = 'fancy'
+" Vim Airline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+set laststatus=2 " To make Airline visible if a window is not split
+let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 
 " Auto pep8
 Plugin 'tell-k/vim-autopep8'
