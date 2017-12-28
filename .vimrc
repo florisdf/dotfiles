@@ -24,7 +24,6 @@ au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
-    \ set textwidth=79 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
@@ -49,7 +48,7 @@ Bundle 'Valloric/YouCompleteMe'
 " Map gt to YCM GoTo
 nnoremap gt :YcmCompleter GoTo<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
-let g:ycm_python_binary_path = 'python'
+let g:ycm_python_binary_path = '/usr/bin/python3'
 
 " Syntax checking/highlighting
 Plugin 'scrooloose/syntastic'
