@@ -165,3 +165,10 @@ let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
+" Easily resize panes
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+
+" move to beginning/end of line
+nnoremap B ^
+nnoremap E $
