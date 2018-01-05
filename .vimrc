@@ -1,6 +1,9 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" Leader is semicolon
+let mapleader=";"
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -107,6 +110,10 @@ Plugin 'idanarye/vim-vebugger'
 Plugin 'lervag/vimtex'
 let g:vimtex_enabled = 1
 
+" Undotree for graphical undo tree representation
+Plugin 'mbbill/undotree'
+nnoremap <leader>u :UndotreeToggle<CR>
+
 " Vim-vebugger keymaps
 let g:vebugger_leader = ";"
 
@@ -157,3 +164,4 @@ let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
+
