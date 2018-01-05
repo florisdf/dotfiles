@@ -167,8 +167,8 @@ nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 " move to beginning/end of line
-nnoremap B ^
-nnoremap E $
+nnoremap B g^
+nnoremap E g$
 
 " move vertically by visual line
 nnoremap j gj
