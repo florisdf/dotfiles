@@ -20,7 +20,7 @@ Plugin 'tmhedberg/SimpylFold'
 let g:SimpylFold_docstring_preview=1 " Show docstrings for folded code
 
 " Proper PEP8 indentation for python files
-au BufNewFile,BufRead *.py,*.c,*.cpp,*.h,*.hpp
+au BufNewFile,BufRead *.py,*.c,*.cpp,*.h,*.hpp,*.tex
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
@@ -103,6 +103,10 @@ Plugin 'Shougo/vimproc.vim'
 " Vim-vebugger
 Plugin 'idanarye/vim-vebugger'
 
+" LaTeX support with vimtex
+Plugin 'lervag/vimtex'
+let g:vimtex_enabled = 1
+
 " Vim-vebugger keymaps
 let g:vebugger_leader = ";"
 
@@ -144,3 +148,10 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" Vimtex + YouCompleteMe
+if !exists('g:ycm_semantic_triggers')
+    let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
+
