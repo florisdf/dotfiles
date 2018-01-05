@@ -132,9 +132,6 @@ function! ChangePaste(type, ...)
         silent exe "normal! p"
         endfunction
 
-" Don't wrap text
-set nowrap
-
 " Set highlight search
 set hlsearch
 
@@ -172,3 +169,7 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 " move to beginning/end of line
 nnoremap B ^
 nnoremap E $
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
