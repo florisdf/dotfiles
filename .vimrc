@@ -155,3 +155,5 @@ if !exists('g:ycm_semantic_triggers')
 endif
 let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
