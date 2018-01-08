@@ -42,6 +42,7 @@ Plugin 'vim-scripts/indentpython.vim'
 
 " NERDTree
 Plugin 'scrooloose/nerdtree'
+nmap <F9> :NERDTreeToggle<CR>
 
 " UTF8 support
 set encoding=utf-8
@@ -96,6 +97,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 
 " Fugitive - git for vim
 Plugin 'tpope/vim-fugitive'
+nmap <F6> :Gstatus<CR>
 
 " Vimproc
 Plugin 'Shougo/vimproc.vim'
