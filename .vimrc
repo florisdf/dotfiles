@@ -103,6 +103,10 @@ Plugin 'Shougo/vimproc.vim'
 " Vim-vebugger
 Plugin 'idanarye/vim-vebugger'
 
+" Tagbar
+Plugin 'majutsushi/tagbar'
+nmap <F8> :TagbarToggle<CR>
+
 " Vim-vebugger keymaps
 let g:vebugger_leader = ";"
 
