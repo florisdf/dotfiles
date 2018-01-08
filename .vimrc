@@ -52,8 +52,8 @@ set encoding=utf-8
 
 " Auto-complete
 Bundle 'Valloric/YouCompleteMe'
-" Map gt to YCM GoTo
-nnoremap gt :YcmCompleter GoTo<CR>
+" Map <leader>] to YCM GoTo
+nnoremap <leader>] :YcmCompleter GoTo<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_python_binary_path = 'python'
 let g:ycm_always_populate_location_list = 1
