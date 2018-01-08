@@ -54,6 +54,11 @@ set encoding=utf-8
 Bundle 'Valloric/YouCompleteMe'
 " Map <leader>j to YCM GoTo
 nnoremap <leader>j :YcmCompleter GoTo<CR>
+
+" Use <leader>l and <leader>h to go back and forth in the jump list
+nnoremap <leader>l <C-i>
+nnoremap <leader>h <C-o>
+
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_python_binary_path = 'python'
 let g:ycm_always_populate_location_list = 1
