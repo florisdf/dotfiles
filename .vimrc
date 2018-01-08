@@ -1,6 +1,9 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" Leader is semicolon
+let mapleader=";"
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -20,7 +23,7 @@ Plugin 'tmhedberg/SimpylFold'
 let g:SimpylFold_docstring_preview=1 " Show docstrings for folded code
 
 " Proper PEP8 indentation for python files
-au BufNewFile,BufRead *.py,*.c,*.cpp,*.h,*.hpp
+au BufNewFile,BufRead *.py,*.c,*.cpp,*.h,*.hpp,*.tex
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
@@ -108,6 +111,13 @@ Plugin 'idanarye/vim-vebugger'
 " Tagbar
 Plugin 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
+" LaTeX support with vimtex
+Plugin 'lervag/vimtex'
+let g:vimtex_enabled = 1
+
+" Undotree for graphical undo tree representation
+Plugin 'mbbill/undotree'
+nnoremap <leader>u :UndotreeToggle<CR>
 
 " Vim-vebugger keymaps
 let g:vebugger_leader = ";"
@@ -126,9 +136,6 @@ function! ChangePaste(type, ...)
     silent exe "normal! `[v`]\"_c"
         silent exe "normal! p"
         endfunction
-
-" Don't wrap text
-set nowrap
 
 " Set highlight search
 set hlsearch
@@ -150,3 +157,24 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" Vimtex + YouCompleteMe
+if !exists('g:ycm_semantic_triggers')
+    let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
+
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
+" Easily resize panes
+nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+
+" move to beginning/end of line
+nnoremap B g^
+nnoremap E g$
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
