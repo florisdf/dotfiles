@@ -84,7 +84,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias config="/usr/bin/git --git-dir=/home/fdf/.cfg/ --work-tree=/home/fdf"
+# Create GIT_CLONES envvar
+export GIT_CLONES=$HOME/git_clones
+export FLO_SCRIPTS=$HOME/scripts
+
+alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 # Cuda
 export PATH="/usr/local/cuda-8.0/bin:$PATH"
@@ -99,15 +103,15 @@ export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Caffe Root
-export CAFFE_ROOT=/home/fdf/git_clones/caffe/
-export PYTHONPATH=/home/fdf/git_clones/caffe/distribute/python:$PYTHONPATH
-export PYTHONPATH=/home/fdf/git_clones/caffe/python:$PYTHONPATH
+export CAFFE_ROOT=$GIT_CLONES/caffe/
+export PYTHONPATH=$GIT_CLONES/caffe/distribute/python:$PYTHONPATH
+export PYTHONPATH=$GIT_CLONES/caffe/python:$PYTHONPATH
 
 # PyOpenPose
-export PYTHONPATH=$PYTHONPATH:/home/fdf/git_clones/PyOpenPose/build/PyOpenPoseLib
+export PYTHONPATH=$PYTHONPATH:$GIT_CLONES/PyOpenPose/build/PyOpenPoseLib
 
 # Add scripts to python path for easy imports
-export PYTHONPATH=$PYTHONPATH:/home/fdf/scripts:/home/fdf/git_clones
+export PYTHONPATH=$PYTHONPATH:$FLO_SCRIPTS:$GIT_CLONES
 
 # Add Cargo's bin directory to PATH for Rust
 export PATH="$PATH:$HOME/.cargo/bin"
