@@ -1,0 +1,135 @@
+[10/30/17, 12:40:16:046] info: ╔═════════════════════════════════════════════════════════════════════════════════╗
+[10/30/17, 12:40:16:049] info: ║      Slack 2.8.2, linux 4.10.0-37-generic on x64 at 10/30/17, 12:40:16:034      ║
+[10/30/17, 12:40:16:050] info: ╚═════════════════════════════════════════════════════════════════════════════════╝
+[10/30/17, 12:40:16:424] info: Initializing local storage instance at path: /home/fdf/.config/Slack/local-settings.json
+[10/30/17, 12:40:17:252] info: WebViewLifeCycle: Creating subscribable lifecycle object
+{ objectId: 'login', assignedId: 1 }
+[10/30/17, 12:40:17:255] info: WebView LifeCycle: New webview component created for login:1', with state 'unloaded'
+[10/30/17, 12:40:17:259] info: Store: SET_NETWORK_STATUS online
+[10/30/17, 12:40:17:353] info: Checking network connection to Slack...
+[10/30/17, 12:40:17:359] info: Store: APP_STARTED
+{ updated: { events: { eventId: 1 } } }
+[10/30/17, 12:40:18:302] info: Store: SAVE_WINDOW_SETTINGS
+{ updated: { windowFrame: { windowSettings: [Object] } } }
+[10/30/17, 12:40:19:486] info: WebViewLifeCycle: State changed
+{ id: 'login',
+  componentId: 1,
+  newState: 'page-loaded',
+  data: null }
+[10/30/17, 12:40:19:487] info: Store: page-loaded
+[10/30/17, 12:40:21:443] info: Store: FOREGROUND_APP
+{ updated: { events: { foregroundApp: [Object] } } }
+[10/30/17, 12:40:26:171] info: WebViewLifeCycle: State changed
+{ id: 'login',
+  componentId: 1,
+  newState: 'page-loaded',
+  data: null }
+[10/30/17, 12:40:26:173] info: Store: page-loaded
+[10/30/17, 12:40:30:328] info: WebView: Received redirect request from https://slack.com/signin to https://eavise.slack.com/.
+[10/30/17, 12:40:30:331] info: WebViewLifeCycle: State changed
+{ id: 'login',
+  componentId: 1,
+  newState: 'page-redirect',
+  data: null }
+[10/30/17, 12:40:32:155] info: WebViewLifeCycle: State changed
+{ id: 'login',
+  componentId: 1,
+  newState: 'page-loaded',
+  data: null }
+[10/30/17, 12:40:32:156] info: Store: page-loaded
+[10/30/17, 12:40:47:837] info: WebView: Received redirect request from https://eavise.slack.com/ to https://slack.com/checkcookie?redir=https%3A%2F%2Feavise.slack.com%2Fsignin%3Fssb_success%3D1%26ssb_relogin%3D.
+[10/30/17, 12:40:47:839] info: WebViewLifeCycle: State changed
+{ id: 'login',
+  componentId: 1,
+  newState: 'page-redirect',
+  data: null }
+[10/30/17, 12:40:47:966] info: WebView: Received redirect request from https://slack.com/checkcookie?redir=https%3A%2F%2Feavise.slack.com%2Fsignin%3Fssb_success%3D1%26ssb_relogin%3D to https://eavise.slack.com/signin?ssb_success=1&ssb_relogin=.
+[10/30/17, 12:40:47:968] info: WebViewLifeCycle: State changed
+{ id: 'login',
+  componentId: 1,
+  newState: 'page-redirect',
+  data: null }
+[10/30/17, 12:40:49:425] info: Store: ADD_NEW_TEAM
+{ updated: 
+   { appTeams: 
+      { selectedTeamId: 'T22HQB273',
+        teamsByIndex: [Object],
+        teamsToSignOut: [] },
+     events: { refreshTeam: [Object] },
+     teams: { T22HQB273: [Object] } },
+  deleted: 
+   { events: 
+      { '1': true,
+        '2': true,
+        '3': true,
+        '4': true,
+        '5': true,
+        '6': true,
+        refreshTeam: [Object] } } }
+[10/30/17, 12:40:49:430] info: WebViewLifeCycle: State changed
+{ id: 'login',
+  componentId: 1,
+  newState: 'component-disposed',
+  data: null }
+[10/30/17, 12:40:49:433] info: WebViewLifeCycle: Removing lifecycle object from storage
+{ componentId: 1, id: 'login' }
+[10/30/17, 12:40:49:457] info: WebViewLifeCycle: Creating subscribable lifecycle object
+{ objectId: 'T22HQB273', assignedId: 2 }
+[10/30/17, 12:40:49:459] info: WebView LifeCycle: New webview component created for T22HQB273:2', with state 'unloaded'
+[10/30/17, 12:40:49:509] warn: Base Component: Attempting to update LoginView when unmounted.
+[10/30/17, 12:40:49:510] warn: Base Component: Attempting to update FullScreenModal when unmounted.
+[10/30/17, 12:40:49:512] warn: Base Component: Attempting to update WebViewLifeCycleComponent when unmounted.
+[10/30/17, 12:40:55:087] info: TeamView: Bugsnag user: U7T0FV50X
+[10/30/17, 12:40:55:099] info: WebViewLifeCycle: State changed
+{ id: 'T22HQB273',
+  componentId: 2,
+  newState: 'page-loaded',
+  data: null }
+[10/30/17, 12:40:55:100] info: Store: page-loaded
+[10/30/17, 12:40:55:486] info: Store: SELECT_CHANNEL
+{ updated: { appTeams: { selectedChannelId: 'C22HQB4V7' } } }
+[10/30/17, 12:40:55:497] info: Store: UPDATE_TEAM_LOCALE
+{ updated: { teams: { T22HQB273: [Object] } } }
+[10/30/17, 12:40:55:571] info: Store: UPDATE_TEAM_THEME
+{ updated: { teams: { T22HQB273: [Object] } } }
+[10/30/17, 12:40:56:978] info: Store: UPDATE_TEAM_ICONS
+{ updated: { teams: { T22HQB273: [Object] } } }
+[10/30/17, 12:40:57:506] info: Webapp finished loading
+[10/30/17, 12:40:57:508] info: WebViewLifeCycle: State changed
+{ id: 'T22HQB273',
+  componentId: 2,
+  newState: 'webapp-loaded',
+  data: null }
+[10/30/17, 12:40:57:509] info: Store: webapp-loaded
+[10/30/17, 12:40:57:746] info: Store: [7] Store an API token for a team
+{ updated: { tokens: { T22HQB273: [Object] } } }
+[10/30/17, 12:41:01:537] info: Store: SAVE_WINDOW_SETTINGS
+{ updated: { windowFrame: { windowSettings: [Object] } } }
+[10/30/17, 12:42:34:603] info: Store: UPDATE_SETTINGS
+{ updated: { settings: { hasRunFromTray: true } } }
+[10/30/17, 12:42:34:615] info: Store: SHOW_TRAY_BALLOON
+{ updated: { dialog: { lastBalloon: [Object] } } }
+[10/30/17, 12:42:35:700] info: Store: SAVE_WINDOW_SETTINGS
+{ updated: { windowFrame: { windowSettings: [Object] } } }
+[10/30/17, 15:36:04:031] info: Store: FOREGROUND_APP
+{ updated: { events: { foregroundApp: [Object] } } }
+[10/30/17, 15:36:05:098] info: Store: SAVE_WINDOW_SETTINGS
+{ updated: { windowFrame: { windowSettings: [Object] } } }
+[10/30/17, 15:36:06:439] info: Store: SELECT_CHANNEL
+{ updated: { appTeams: { selectedChannelId: 'G28L712E5' } } }
+[10/30/17, 15:36:09:444] info: Store: SELECT_CHANNEL
+{ updated: { appTeams: { selectedChannelId: 'C22HQB4V7' } } }
+[10/30/17, 15:36:10:782] info: Store: SELECT_CHANNEL
+{ updated: { appTeams: { selectedChannelId: 'G28L712E5' } } }
+[10/30/17, 15:36:12:253] info: Store: SELECT_CHANNEL
+{ updated: { appTeams: { selectedChannelId: 'C22HQB4V7' } } }
+[10/30/17, 15:36:14:002] info: Store: SELECT_CHANNEL
+{ updated: { appTeams: { selectedChannelId: 'G28L712E5' } } }
+[10/30/17, 15:36:24:851] info: Store: SAVE_WINDOW_SETTINGS
+{ updated: { windowFrame: { windowSettings: [Object] } } }
+[10/30/17, 15:36:26:378] info: Store: FOREGROUND_APP
+{ updated: { events: { foregroundApp: [Object] } } }
+[10/30/17, 15:36:27:431] info: Store: SAVE_WINDOW_SETTINGS
+{ updated: { windowFrame: { windowSettings: [Object] } } }
+[10/30/17, 15:36:42:347] info: Store: SAVE_WINDOW_SETTINGS
+{ updated: { windowFrame: { windowSettings: [Object] } } }

@@ -1,0 +1,14 @@
+30m0(Build:2)
+Element does not exist and cannot be created: "documentsignatures.xml"
+Rethrow
+
+Rethrow
+
+Rethrow
+/build/libreoffice-95El70/libreoffice-5.3.1/sfx2/source/doc/sfxbasemodel.cxx:1667: storeToURL
+/build/libreoffice-95El70/libreoffice-5.3.1/sfx2/source/doc/objstor.cxx:1106: Begin
+/build/libreoffice-95El70/libreoffice-5.3.1/sfx2/source/doc/objstor.cxx:1307: SaveAs/Export
+/build/libreoffice-95El70/libreoffice-5.3.1/sfx2/source/doc/objstor.cxx:1323: Locking
+/build/libreoffice-95El70/libreoffice-5.3.1/sfx2/source/doc/objstor.cxx:1537: Storing in alien format.
+/build/libreoffice-95El70/libreoffice-5.3.1/sfx2/source/doc/sfxbasemodel.cxx:3052: Storing has failed, no error is set!
+/build/libreoffice-95El70/libreoffice-5.3.1/sfx2/source/doc/sfxbasemodel.cxx:3092: Storing failed!

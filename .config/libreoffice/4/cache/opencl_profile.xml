@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profile>
+ <version>LibreOffice v1</version>
+ <device>
+  <type>opencl</type>
+  <name>Quadro K4200</name>
+  <driver>384.69</driver>
+  <time>0.051493</time>
+  <errors>false</errors>
+ </device>
+ <device>
+  <type>opencl</type>
+  <name>Quadro 2000</name>
+  <driver>384.69</driver>
+  <time>0.105077</time>
+  <errors>false</errors>
+ </device>
+ <device>
+  <type>native</type>
+  <time>4.74883</time>
+  <errors>false</errors>
+ </device>
+</profile>

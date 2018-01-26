@@ -1,0 +1,40 @@
+[Added Associations]
+application/x-tar=vim.desktop;
+application/octet-stream=vim.desktop;
+text/x-python=vim.desktop;
+application/json=vim.desktop;
+image/jpeg=eog.desktop;gimp.desktop;
+text/plain=vim.desktop;
+text/x-csrc=vim.desktop;
+application/xml=vim.desktop;
+inode/directory=nautilus-folder-handler.desktop;
+image/svg+xml=eog.desktop;inkscape.desktop;
+text/csv=vim.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/ftp=firefox.desktop;
+x-scheme-handler/chrome=firefox.desktop;
+text/html=firefox.desktop;
+application/x-extension-htm=firefox.desktop;
+application/x-extension-html=firefox.desktop;
+application/x-extension-shtml=firefox.desktop;
+application/xhtml+xml=firefox.desktop;
+application/x-extension-xhtml=firefox.desktop;
+application/x-extension-xht=firefox.desktop;
+text/tab-separated-values=vim.desktop;
+
+[Default Applications]
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/ftp=firefox.desktop
+x-scheme-handler/chrome=firefox.desktop
+text/html=firefox.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
+
+[Removed Associations]
+text/plain=libreoffice-writer.desktop;org.gnome.gedit.desktop;
