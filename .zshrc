@@ -116,6 +116,11 @@ export PYTHONPATH=$PYTHONPATH:$FLO_SCRIPTS:$GIT_CLONES
 # Add Cargo's bin directory to PATH for Rust
 export PATH="$PATH:$HOME/.cargo/bin"
 
+# Add MATLAB bin to PATH
+export PATH="$PATH:/usr/local/MATLAB/R2017b/bin"
+
+# Add .local/bin to PATH
+export PATH="$HOME/.local/bin:$PATH"
 
 PATH="/home/fdf/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/fdf/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
