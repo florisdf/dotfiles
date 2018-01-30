@@ -134,3 +134,9 @@ PERL_MM_OPT="INSTALL_BASE=/home/fdf/perl5"; export PERL_MM_OPT;
 
 # Autoenv for automagical activation of virtualenv when cd'ing to project
 source "$HOME/.autoenv/activate.sh"
+
+# Require virtualenv when installing with pip
+export PIP_REQUIRE_VIRTUALENV=true
+
+# Configure pip so that it tries to reuse already installed packages
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
