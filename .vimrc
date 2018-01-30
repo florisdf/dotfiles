@@ -24,16 +24,32 @@ set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
 
+" Remap for searching the visually selected text
+" See http://vim.wikia.com/wiki/Search_for_visually_selected_text
+" Search for selected text, forwards or backwards.
+vnoremap <silent> * :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy/<C-R><C-R>=substitute(
+  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>
+vnoremap <silent> # :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy?<C-R><C-R>=substitute(
+  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>
+
 " Disable automatic comment insertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Proper PEP8 indentation for python files
 au BufNewFile,BufRead *.py,*.c,*.cpp,*.h,*.hpp,*.tex
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set expandtab |
-    \ set autoindent |
+    \ set tabstop=4 | " a hard TAB displays as 4 columns
+    \ set softtabstop=4 | " insert/delete 4 spaces when hitting a TAB/BACKSPACE
+    \ set shiftwidth=4 | " operation >> indents 4 columns; << unindents 4 columns
+    \ set shiftround | " round indent to multiple of 'shiftwidth'
+    \ set textwidth=79 " lines longer than 79 columns will be broken
+    \ set expandtab | " insert spaces when hitting TABs
+    \ set autoindent | " align the new line indent with the previous line
     \ set fileformat=unix |
 
 " Indentation for full stack development
@@ -108,23 +124,14 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
+let g:syntastic_loc_list_height=5
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " Don't use syntastic with python files
 let g:syntastic_mode_map = {
 			\ "mode": "active",
-			\ "passive_filetypes": ["python"] }
-
-" Vim Airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-set laststatus=2 " To make Airline visible if a window is not split
-let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
-
-" Auto pep8
-Plugin 'tell-k/vim-autopep8'
+			\ "passive_filetypes": [] }
+			" \ ["python"] }
 
 " YCM Generator
 Plugin 'rdnetto/YCM-Generator'
