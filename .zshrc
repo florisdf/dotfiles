@@ -140,3 +140,14 @@ export PIP_REQUIRE_VIRTUALENV=true
 
 # Configure pip so that it tries to reuse already installed packages
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+# Include docker-compose command line completion directory
+fpath=(~/.zsh/completion $fpath)
+
+# In order for MatCaffe to work (see https://github.com/BVLC/caffe/issues/5447)
+export LD_PRELOAD=$LD_PRELOAD:/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Set PROJECT_HOME to the dir where new virtualenv projects need to be created
+export PROJECT_HOME=$FLO_SCRIPTS
