@@ -8,6 +8,9 @@ syntax on
 " System clipboard
 set clipboard=unnamed
 
+" Don't modify pasted text
+set pastetoggle=<F2>
+
 " Change word with yanked text
 "This allows for change paste motion cp{motion}
 nmap <silent> cp :set opfunc=ChangePaste<CR>g@
