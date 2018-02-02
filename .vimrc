@@ -133,8 +133,7 @@ let g:syntastic_check_on_wq = 0
 " Don't use syntastic with python files
 let g:syntastic_mode_map = {
 			\ "mode": "active",
-			\ "passive_filetypes": [] }
-			" \ ["python"] }
+			\ "passive_filetypes": ["python"] }
 
 " YCM Generator
 Plugin 'rdnetto/YCM-Generator'
