@@ -120,9 +120,38 @@ export PYTHONPATH=$PYTHONPATH:/usr/share/blender/scripts/modules
 # Add Cargo's bin directory to PATH for Rust
 export PATH="$PATH:$HOME/.cargo/bin"
 
+# Add MATLAB bin to PATH
+export PATH="$PATH:/usr/local/MATLAB/R2017b/bin"
+
+# Add .local/bin to PATH
+export PATH="$HOME/.local/bin:$PATH"
+
+# Powerline ZSH prompt
+#powerline-daemon -q
+#. "$HOME/.local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh"
 
 PATH="/home/fdf/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/fdf/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/fdf/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/fdf/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/fdf/perl5"; export PERL_MM_OPT;
+
+# Autoenv for automagical activation of virtualenv when cd'ing to project
+source "$HOME/.autoenv/activate.sh"
+
+# Require virtualenv when installing with pip
+export PIP_REQUIRE_VIRTUALENV=true
+
+# Configure pip so that it tries to reuse already installed packages
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+# Include docker-compose command line completion directory
+fpath=(~/.zsh/completion $fpath)
+
+# In order for MatCaffe to work (see https://github.com/BVLC/caffe/issues/5447)
+export LD_PRELOAD=$LD_PRELOAD:/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Set PROJECT_HOME to the dir where new virtualenv projects need to be created
+export PROJECT_HOME=$FLO_SCRIPTS

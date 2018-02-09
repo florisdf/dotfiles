@@ -94,108 +94,53 @@ nnoremap k gk
 set nocompatible              " be iMproved, required for Vundle
 filetype off                  " required for Vundle
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" vim-plug
+call plug#begin('~/.config/nvim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" YouCompleteMe!
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
-" SimpylFold
-Plugin 'tmhedberg/SimpylFold'
-let g:SimpylFold_docstring_preview=1 " Show docstrings for folded code
+" YCM Generator
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
-" Auto-indentation
-Plugin 'vim-scripts/indentpython.vim'
+" NeoMake
+Plug 'neomake/neomake'
 
-" NERDTree
-Plugin 'scrooloose/nerdtree'
+" Smart pane switching with awareness of Vim splits.
+Plug 'christoomey/vim-tmux-navigator'
+
+" NerdTree
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 nmap <F9> :NERDTreeToggle<CR>
 
-" Auto-complete
-Bundle 'Valloric/YouCompleteMe'
-" Map <leader>j to YCM GoTo
-nnoremap <leader>j :YcmCompleter GoTo<CR>
-let g:ycm_autoclose_preview_window_after_completion=1
-let g:ycm_python_binary_path = 'python'
-let g:ycm_always_populate_location_list = 1
-
-" Syntax checking/highlighting
-Plugin 'scrooloose/syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_loc_list_height=5
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-" Don't use syntastic with python files
-let g:syntastic_mode_map = {
-			\ "mode": "active",
-			\ "passive_filetypes": ["python"] }
-
-<<<<<<< HEAD
-" Vim Airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-set laststatus=2 " To make Airline visible if a window is not split
-let g:airline_powerline_fonts = 1
-let g:Poweline_symbols='unicode'
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
-
-" Auto pep8
-Plugin 'tell-k/vim-autopep8'
-
-=======
->>>>>>> 093f3549c1b1e98a58c49a0f9faffb9166b501d4
-" YCM Generator
-Plugin 'rdnetto/YCM-Generator'
-
-" Vim-Tmux Navigator
-Plugin 'christoomey/vim-tmux-navigator'
-
-" Fugitive - git for vim
-Plugin 'tpope/vim-fugitive'
-nmap <F6> :Gstatus<CR>
-
-" Vimproc
-Plugin 'Shougo/vimproc.vim'
-
-" Vim-vebugger
-Plugin 'idanarye/vim-vebugger'
-let g:vebugger_leader = ";"
-
 " Tagbar
-Plugin 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
 
-" LaTeX support with vimtex
-Plugin 'lervag/vimtex'
-let g:vimtex_enabled = 1
+" Fugitive - git for vim
+Plug 'tpope/vim-fugitive'
+nmap <F6> :Gstatus<CR>
+
+" Vim Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+let g:airline_powerline_fonts = 1
+
+" PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run install script
+Plug 'junegunn/fzf', { 'dir': '$GIT_CLONES/fzf', 'do': './install --all' }
 
 " Undotree for graphical undo tree representation
-Plugin 'mbbill/undotree'
+Plug 'mbbill/undotree'
 nnoremap <leader>u :UndotreeToggle<CR>
 
-" Ctrl-P
-Plugin 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+" LaTeX support with vimtex
+Plug 'lervag/vimtex'
+let g:vimtex_enabled = 1
 
-" vim-run-in-blender
-Bundle 'https://github.com/mipmip/vim-run-in-blender'
-nnoremap <leader> :RunInBlender<CR>
-vnoremap <leader> :RunSelectionInBlender<CR>
-
-" Markdown syntax support
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+" Initialize plugin system
+call plug#end()
 
 " Vimtex + YouCompleteMe
 if !exists('g:ycm_semantic_triggers')
@@ -203,9 +148,5 @@ if !exists('g:ycm_semantic_triggers')
 endif
 let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 
-" Powerline
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-set laststatus=2
-
+" When writing a buffer.
+call neomake#configure#automake('w')
