@@ -120,6 +120,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 set laststatus=2 " To make Airline visible if a window is not split
 let g:airline_powerline_fonts = 1
+let g:Poweline_symbols='unicode'
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 
@@ -159,6 +160,11 @@ nnoremap <leader>u :UndotreeToggle<CR>
 Plugin 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" vim-run-in-blender
+Bundle 'https://github.com/mipmip/vim-run-in-blender'
+nnoremap <leader> :RunInBlender<CR>
+vnoremap <leader> :RunSelectionInBlender<CR>
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
