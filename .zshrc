@@ -88,6 +88,7 @@ source $ZSH/oh-my-zsh.sh
 # Create GIT_CLONES envvar
 export GIT_CLONES=$HOME/git_clones
 export FLO_SCRIPTS=$HOME/scripts
+export FLOJECTS=$HOME/projects
 
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
@@ -154,4 +155,7 @@ export LD_PRELOAD=$LD_PRELOAD:/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Set PROJECT_HOME to the dir where new virtualenv projects need to be created
-export PROJECT_HOME=$FLO_SCRIPTS
+export PROJECT_HOME=$FLOJECTS
+
+# Set EDITOR envvar
+export EDITOR=/usr/bin/nvim
