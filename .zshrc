@@ -101,6 +101,8 @@ export CUDA_VISIBLE_DEVICES=0
 
 # virtualenv and virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Caffe Root
@@ -136,11 +138,9 @@ PERL_LOCAL_LIB_ROOT="/home/fdf/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROO
 PERL_MB_OPT="--install_base \"/home/fdf/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/fdf/perl5"; export PERL_MM_OPT;
 
-# Autoenv for automagical activation of virtualenv when cd'ing to project
-source "$HOME/.autoenv/activate.sh"
-
 # Require virtualenv when installing with pip
 export PIP_REQUIRE_VIRTUALENV=true
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
 
 # Configure pip so that it tries to reuse already installed packages
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
