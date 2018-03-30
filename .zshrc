@@ -85,6 +85,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Set Vi mode
+# bindkey -v
+# Set key timeout to 0.1 seconds
+# export KEYTIMEOUT=1
+
 # Create GIT_CLONES envvar
 export GIT_CLONES=$HOME/git_clones
 export FLO_SCRIPTS=$HOME/scripts
