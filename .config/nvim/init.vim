@@ -97,14 +97,35 @@ filetype off                  " required for Vundle
 " vim-plug
 call plug#begin('~/.config/nvim/plugged')
 
+" Snippet engine
+Plug 'SirVer/ultisnips'
+
+" Snippets
+Plug 'honza/vim-snippets'
+
+" Multiple cursors
+Plug 'terryma/vim-multiple-cursors'
+
 " YouCompleteMe!
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+nnoremap <leader>j :YcmCompleter GoTo<CR>
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_python_binary_path = 'python'
+
+" UltiSnips triggering
+let g:UltiSnipsExpandTrigger = '<C-j>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 
 " YCM Generator
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
 " NeoMake
 Plug 'neomake/neomake'
+
+" PEP8 indentation
+Plug 'Vimjas/vim-python-pep8-indent'
+let g:python_pep8_indent_multiline_string = 1
 
 " Smart pane switching with awareness of Vim splits.
 Plug 'christoomey/vim-tmux-navigator'
@@ -120,6 +141,9 @@ nmap <F8> :TagbarToggle<CR>
 " Fugitive - git for vim
 Plug 'tpope/vim-fugitive'
 nmap <F6> :Gstatus<CR>
+
+" vim-surround to easily surrond a word etc with e.g. quotes
+Plug 'tpope/vim-surround'
 
 " Vim Airline
 Plug 'vim-airline/vim-airline'
@@ -139,8 +163,16 @@ nnoremap <leader>u :UndotreeToggle<CR>
 Plug 'lervag/vimtex'
 let g:vimtex_enabled = 1
 
+" Vim-markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+" Vim YAML
+Plug 'chase/vim-ansible-yaml'
+
 " Initialize plugin system
 call plug#end()
+
 
 " Vimtex + YouCompleteMe
 if !exists('g:ycm_semantic_triggers')
