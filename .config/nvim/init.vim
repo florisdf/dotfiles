@@ -61,6 +61,10 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
 
+" Enable spell checking for LaTex documents
+au BufNewFile,BufRead *.tex
+		\set spell
+
 " UTF8 support
 set encoding=utf-8
 
