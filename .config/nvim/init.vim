@@ -56,10 +56,13 @@ au BufNewFile,BufRead *.py,*.c,*.cpp,*.h,*.hpp,*.tex
     \ set fileformat=unix |
 
 " Indentation for full stack development
-au BufNewFile,BufRead *.js, *.html, *.css
+au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
+    \ set shiftround | " round indent to multiple of 'shiftwidth'
+    \ set expandtab | " insert spaces when hitting TABs
+    \ set autoindent | " align the new line indent with the previous line
 
 " UTF8 support
 set encoding=utf-8
