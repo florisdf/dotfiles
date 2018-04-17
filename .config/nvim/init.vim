@@ -64,6 +64,10 @@ au BufNewFile,BufRead *.js,*.html,*.css
     \ set expandtab | " insert spaces when hitting TABs
     \ set autoindent | " align the new line indent with the previous line
 
+" Enable spell checking for LaTex documents
+au BufNewFile,BufRead *.tex
+		\set spell
+
 " UTF8 support
 set encoding=utf-8
 

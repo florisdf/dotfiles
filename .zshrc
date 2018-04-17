@@ -107,7 +107,6 @@ export CUDA_VISIBLE_DEVICES=0
 
 # virtualenv and virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
 
@@ -146,7 +145,7 @@ PERL_MM_OPT="INSTALL_BASE=/home/fdf/perl5"; export PERL_MM_OPT;
 
 # Require virtualenv when installing with pip
 export PIP_REQUIRE_VIRTUALENV=true
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
 
 # Configure pip so that it tries to reuse already installed packages
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
@@ -164,3 +163,6 @@ export PROJECT_HOME=$FLOJECTS
 
 # Set EDITOR envvar
 export EDITOR=/usr/bin/nvim
+
+# Alias open command
+alias open=xdg-open
