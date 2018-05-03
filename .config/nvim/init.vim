@@ -63,7 +63,7 @@ au BufNewFile,BufRead *.js, *.html, *.css
 
 " Enable spell checking for LaTex documents
 au BufNewFile,BufRead *.tex
-		\set spell
+    \set spell |
 
 " UTF8 support
 set encoding=utf-8
@@ -91,10 +91,14 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 " move to beginning/end of line
 nnoremap B g^
 nnoremap E g$
+vnoremap B g^
+vnoremap E g$
 
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 set nocompatible              " be iMproved, required for Vundle
 filetype off                  " required for Vundle
 
@@ -144,7 +148,9 @@ nmap <F8> :TagbarToggle<CR>
 
 " Fugitive - git for vim
 Plug 'tpope/vim-fugitive'
+nmap <F5> :Gpull<CR>
 nmap <F6> :Gstatus<CR>
+nmap <F7> :Gpush<CR>
 
 " vim-surround to easily surrond a word etc with e.g. quotes
 Plug 'tpope/vim-surround'
