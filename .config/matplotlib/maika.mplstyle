@@ -1,0 +1,58 @@
+### TEXT
+text.usetex : True
+
+### FONT
+font.family : 'serif'
+font.size   : 8
+
+### LINES
+lines.linewidth : 1
+
+### AXES
+axes.linewidth	: 0.1
+axes.xmargin	: 1
+axes.grid		: True
+axes.facecolor	: fdf6e3
+
+axes.spines.right : False
+axes.spines.left : True
+axes.spines.top : False
+axes.spines.bottom : True
+
+axes.prop_cycle	: cycler('color', ['859900', 'd33682', '268bd2', 'cb4b16', '6c71c4', '586e75', '2aa198', 'dc322f', '93a1a1'])
+
+# axes.unicode_minus  : True    # use unicode for the minus symbol
+                               # rather than hyphen.  See
+                               # http://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes
+
+### TICKS
+xtick.major.width	: 0.1
+
+xtick.minor.width	: 0.05
+xtick.minor.visible	: True
+
+ytick.major.width	: 0.1
+
+ytick.minor.width	: 0.05
+ytick.minor.visible	: True
+
+### GRID
+grid.linewidth	: 0.1
+grid.color		: 93a1a1
+grid.alpha		: 0.5
+
+### FIGURE
+figure.figsize	: 1.92, 1.28
+figure.facecolor: (0, 0, 0, 0)
+
+### SAVEFIG
+savefig.bbox : tight
+
+### LEGEND
+legend.frameon	: True
+legend.framealpha		: 0.5
+legend.edgecolor		: none
+legend.fontsize		: 8
+legend.labelspacing	: 0.15
+legend.handlelength	: 1.0
+legend.handletextpad	: 0.5
