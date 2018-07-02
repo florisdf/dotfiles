@@ -73,8 +73,8 @@ au BufNewFile,BufRead *.js,*.html,*.css
     \ set expandtab |
     \ set autoindent
 
-" Enable spell checking for LaTex documents
-au BufNewFile,BufRead *.tex set spell
+" Enable spell checking for LaTex and markdown documents
+au BufNewFile,BufRead *.md,*.tex setlocal spell
 
 " UTF8 support
 set encoding=utf-8
