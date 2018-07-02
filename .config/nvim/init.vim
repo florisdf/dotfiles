@@ -42,31 +42,39 @@ vnoremap <silent> # :<C-U>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
 " Auto-wrap text + comments using textwidth + allow formatting with 'gq'
-set formatoptions=tcq
+" Also, when joining text, remove comment leader
+setlocal formatoptions=tcqajwn
 
 " Proper PEP8 indentation for python files
 au BufNewFile,BufRead *.py,*.c,*.cpp,*.h,*.hpp,*.tex,*.md
-    \ set tabstop=4 | " a hard TAB displays as 4 columns
-    \ set softtabstop=4 | " insert/delete 4 spaces when hitting a TAB/BACKSPACE
-    \ set shiftwidth=4 | " operation >> indents 4 columns; << unindents 4 columns
-    \ set shiftround | " round indent to multiple of 'shiftwidth'
-    \ set textwidth=79 " lines longer than 79 columns will be broken
-    \ set expandtab | " insert spaces when hitting TABs
-    \ set autoindent | " align the new line indent with the previous line
+    \ set tabstop=4 |
+    \ set softtabstop=4 | 
+    \ set shiftwidth=4 | 
+    \ set shiftround | 
+    \ set textwidth=79 |
+    \ set expandtab | 
+    \ set autoindent | 
     \ set fileformat=unix
+
+" a hard TAB displays as 4 columns
+" insert/delete 4 spaces when hitting a TAB/BACKSPACE
+" operation >> indents 4 columns; << unindents 4 columns
+" round indent to multiple of 'shiftwidth'
+" lines longer than 79 columns will be broken
+" insert spaces when hitting TABs
+" align the new line indent with the previous line
 
 " Indentation for full stack development
 au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
-    \ set shiftround | " round indent to multiple of 'shiftwidth'
-    \ set expandtab | " insert spaces when hitting TABs
-    \ set autoindent " align the new line indent with the previous line
+    \ set shiftround |
+    \ set expandtab |
+    \ set autoindent
 
 " Enable spell checking for LaTex documents
-au BufNewFile,BufRead *.tex
-    \set spell
+au BufNewFile,BufRead *.tex set spell
 
 " UTF8 support
 set encoding=utf-8
@@ -181,7 +189,7 @@ let g:vimtex_enabled = 1
 
 " Vim-markdown
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+" Plug 'plasticboy/vim-markdown'
 
 " Vim YAML
 Plug 'chase/vim-ansible-yaml'
