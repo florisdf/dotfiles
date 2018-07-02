@@ -41,11 +41,11 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-" Disable automatic comment insertion
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" Auto-wrap text + comments using textwidth + allow formatting with 'gq'
+set formatoptions=tcq
 
 " Proper PEP8 indentation for python files
-au BufNewFile,BufRead *.py,*.c,*.cpp,*.h,*.hpp,*.tex
+au BufNewFile,BufRead *.py,*.c,*.cpp,*.h,*.hpp,*.tex,*.md
     \ set tabstop=4 | " a hard TAB displays as 4 columns
     \ set softtabstop=4 | " insert/delete 4 spaces when hitting a TAB/BACKSPACE
     \ set shiftwidth=4 | " operation >> indents 4 columns; << unindents 4 columns
@@ -53,7 +53,7 @@ au BufNewFile,BufRead *.py,*.c,*.cpp,*.h,*.hpp,*.tex
     \ set textwidth=79 " lines longer than 79 columns will be broken
     \ set expandtab | " insert spaces when hitting TABs
     \ set autoindent | " align the new line indent with the previous line
-    \ set fileformat=unix |
+    \ set fileformat=unix
 
 " Indentation for full stack development
 au BufNewFile,BufRead *.js,*.html,*.css
@@ -62,11 +62,11 @@ au BufNewFile,BufRead *.js,*.html,*.css
     \ set shiftwidth=2 |
     \ set shiftround | " round indent to multiple of 'shiftwidth'
     \ set expandtab | " insert spaces when hitting TABs
-    \ set autoindent | " align the new line indent with the previous line
+    \ set autoindent " align the new line indent with the previous line
 
 " Enable spell checking for LaTex documents
 au BufNewFile,BufRead *.tex
-    \set spell |
+    \set spell
 
 " UTF8 support
 set encoding=utf-8
@@ -83,6 +83,9 @@ nnoremap <C-w>- <C-w>s
 " Use <leader>l and <leader>h to go back and forth in the jump list
 nnoremap <leader>l <C-i>
 nnoremap <leader>h <C-o>
+
+" Easily go from terminal mode to normal mode
+tnoremap <Esc> <C-\><C-n>
 
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
@@ -152,7 +155,7 @@ nmap <F8> :TagbarToggle<CR>
 " Fugitive - git for vim
 Plug 'tpope/vim-fugitive'
 nmap <F5> :Gpull<CR>
-nmap <F6> :Gstatus<CR>
+nmap <F6> :Gstatus<CR>:8<CR>
 nmap <F7> :Gpush<CR>
 
 " vim-surround to easily surrond a word etc with e.g. quotes
@@ -182,6 +185,9 @@ Plug 'plasticboy/vim-markdown'
 
 " Vim YAML
 Plug 'chase/vim-ansible-yaml'
+
+" Colorize HEX strings
+Plug 'ap/vim-css-color'
 
 " Initialize plugin system
 call plug#end()
