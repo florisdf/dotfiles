@@ -1,3 +1,5 @@
+from ranger.api.commands import Command
+
 # https://github.com/ranger/ranger/wiki/Integrating-File-Search-with-fzf
 # Now, simply bind this function to a key, by adding this to your ~/.config/ranger/rc.conf: map <C-f> fzf_select
 class fzf_select(Command):
