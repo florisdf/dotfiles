@@ -171,3 +171,6 @@ alias open=xdg-open
 
 # Alias gmom for git merge
 alias gmom="git merge origin/master --no-ff"
+
+# Add .scripts to PATH
+PATH="$PATH:/home/fdf/.scripts"; export PATH;
