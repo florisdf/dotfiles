@@ -107,7 +107,7 @@ export CUDA_VISIBLE_DEVICES=0
 
 # virtualenv and virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+export VIRTUALENVWRAPPER_VIRTUALENV=/home/fdf/.local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Caffe Root
