@@ -118,6 +118,9 @@ export PYTHONPATH=$GIT_CLONES/caffe/python:$PYTHONPATH
 # PyOpenPose
 export PYTHONPATH=$PYTHONPATH:$GIT_CLONES/PyOpenPose/build/PyOpenPoseLib
 
+# Open-Reid
+export PYTHONPATH=$PYTHONPATH:/home/fdf/git_clones/open-reid
+
 # Add scripts to python path for easy imports
 export PYTHONPATH=$PYTHONPATH:$FLO_SCRIPTS:$GIT_CLONES
 
