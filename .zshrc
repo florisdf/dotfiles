@@ -160,6 +160,8 @@ fpath=(~/.zsh/completion $fpath)
 export LD_PRELOAD=$LD_PRELOAD:/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Use ~~ as fzf trigger sequence instead of the default **
+export FZF_COMPLETION_TRIGGER='~~'
 
 # Set PROJECT_HOME to the dir where new virtualenv projects need to be created
 export PROJECT_HOME=$FLOJECTS
@@ -169,3 +171,9 @@ export EDITOR=/usr/bin/nvim
 
 # Alias open command
 alias open=xdg-open
+
+# Alias gmom for git merge
+alias gmom="git merge origin/master --no-ff"
+
+# Add .scripts to PATH
+PATH="$PATH:/home/fdf/.scripts"; export PATH;
