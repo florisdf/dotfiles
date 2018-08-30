@@ -84,6 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gm="git merge --no-ff"
 
 # Set Vi mode
 # bindkey -v
