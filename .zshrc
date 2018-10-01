@@ -113,20 +113,20 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # Caffe Root
 export CAFFE_ROOT=$GIT_CLONES/caffe/
-export PYTHONPATH=$GIT_CLONES/caffe/distribute/python:$PYTHONPATH
-export PYTHONPATH=$GIT_CLONES/caffe/python:$PYTHONPATH
+# export PYTHONPATH=$GIT_CLONES/caffe/distribute/python:$PYTHONPATH
+# export PYTHONPATH=$GIT_CLONES/caffe/python:$PYTHONPATH
 
 # PyOpenPose
-export PYTHONPATH=$PYTHONPATH:$GIT_CLONES/PyOpenPose/build/PyOpenPoseLib
+# export PYTHONPATH=$PYTHONPATH:$GIT_CLONES/PyOpenPose/build/PyOpenPoseLib
 
 # Open-Reid
-export PYTHONPATH=$PYTHONPATH:/home/fdf/git_clones/open-reid
+# export PYTHONPATH=$PYTHONPATH:/home/fdf/git_clones/open-reid
 
 # Add scripts to python path for easy imports
-export PYTHONPATH=$PYTHONPATH:$FLO_SCRIPTS:$GIT_CLONES
+export PYTHONPATH=$PYTHONPATH:$FLO_SCRIPTS
 
 # Add blender modules to python path
-export PYTHONPATH=$PYTHONPATH:/usr/share/blender/scripts/modules
+# export PYTHONPATH=$PYTHONPATH:/usr/share/blender/scripts/modules
 
 # Add Cargo's bin directory to PATH for Rust
 export PATH="$PATH:$HOME/.cargo/bin"
