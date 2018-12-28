@@ -128,6 +128,9 @@ export PYTHONPATH=$PYTHONPATH:$FLO_SCRIPTS:$GIT_CLONES
 # Add blender modules to python path
 export PYTHONPATH=$PYTHONPATH:/usr/share/blender/scripts/modules
 
+# Add hoezithet to python path
+export PYTHONPATH=$PYTHONPATH:/home/fdf/hugo
+
 # Add Cargo's bin directory to PATH for Rust
 export PATH="$PATH:$HOME/.cargo/bin"
 
@@ -149,7 +152,7 @@ PERL_MM_OPT="INSTALL_BASE=/home/fdf/perl5"; export PERL_MM_OPT;
 
 # Require virtualenv when installing with pip
 export PIP_REQUIRE_VIRTUALENV=true
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.7
 
 # Configure pip so that it tries to reuse already installed packages
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
