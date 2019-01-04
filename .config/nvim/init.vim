@@ -73,7 +73,13 @@ au BufNewFile,BufRead *.js,*.html,*.css
     \ set autoindent
 
 " Enable spell checking for LaTex and markdown documents
-au BufNewFile,BufRead *.md,*.tex setlocal spell
+au BufNewFile,BufRead *.md,*.tex
+            \ setlocal spell |
+            \ set spelllang=en,nl |
+            \ set ft=tex
+
+au BufNewFile,BufRead *.md
+            \ set syntax=markdown
 
 " UTF8 support
 set encoding=utf-8
@@ -138,10 +144,7 @@ let g:UltiSnipsExpandTrigger = '<C-j>'
 let g:UltiSnipsJumpForwardTrigger = '<C-j>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 
-" YCM Generator
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-
-" NeoMake
+" NeoMake syntax checker
 Plug 'neomake/neomake'
 
 " PEP8 indentation
